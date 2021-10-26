@@ -23,7 +23,7 @@ export const AppProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
   return (
     <AppContext.Provider
-      vaule={{
+      value={{
         budget: state.budget,
         expenses: state.expenses,
         dispatch,
