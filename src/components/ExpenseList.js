@@ -1,14 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ExpenseItem from './ExpenseItem';
+import { AppContext } from '../context/AppContext';
 
 const ExpenseList = () => {
-  const expenses = [
-    { id: 12, name: 'Rent', cost: 800 },
-    { id: 13, name: 'Travel', cost: 250 },
-    { id: 14, name: 'Groceries', cost: 300 },
-    { id: 15, name: 'Celluar', cost: 80 },
-    { id: 16, name: 'Online Spending', cost: 150 },
-  ];
+  const { expenses } = useContext(AppContext);
   return (
     <ul className="list-group">
       {expenses.map((expense) => (
